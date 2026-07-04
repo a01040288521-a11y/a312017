@@ -361,7 +361,7 @@ let D=MONTHS[CURRENT_MONTH].D, SH=MONTHS[CURRENT_MONTH].SH, PS=MONTHS[CURRENT_MO
   document.addEventListener('DOMContentLoaded',function(){
     const sel=document.getElementById('monthSel');
     if(!sel) return;
-    sel.innerHTML=MONTH_ORDER.map(m=>`<option value="${m}"${m===CURRENT_MONTH?' selected':''}>${MONTHS[m].label}</option>`).join('');
+    sel.innerHTML=MONTH_ORDER.map(m=>`<option value="${m}"${m===CURRENT_MONTH?' selected':''} style="color:#1a2233;background:#fff">${MONTHS[m].label}</option>`).join('');
     sel.addEventListener('change',function(){
       try{ window.name='MONTH:'+sel.value; }catch(e){}
       location.reload();
